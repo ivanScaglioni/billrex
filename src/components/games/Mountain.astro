@@ -1,0 +1,55 @@
+---
+import banner from '../../assets/banner_mountain.png'
+---
+
+
+
+
+<div class="game_card">
+    
+    <img class="game_img" src={banner.src} alt="">
+
+
+    <div class="game_title game_text">
+        Mountain
+    </div>
+
+    <div class="game_description game_text">
+        Test your resilience by climbing this "impossible mountain(山)". A game inspired by "Golfing Goverit with Alva Majo" which in turn was inspired by the masterpiece "Getting Goverit with Bennett Fody"
+        
+    </div>
+</div>
+
+<style is:global>
+
+.game_title{
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+
+.game_card{
+    
+    min-width: 100%;
+    z-index: 100;
+    overflow: hidden;
+    background-color: #526d82b9;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    
+}
+
+.game_text{
+    padding: 30px;
+}
+
+.game_img{
+    object-fit: cover;
+    min-width: 100%;
+    height: 500px;
+}
+
+
+
+</style>
