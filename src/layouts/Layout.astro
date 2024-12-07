@@ -1,6 +1,6 @@
 ---
 import Footer from "./Footer.astro"
-
+import Navbar from "./Navbar.astro";
 
 ---
 
@@ -12,11 +12,15 @@ import Footer from "./Footer.astro"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Amarante&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Amarante&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+		
+		
+		
 
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
+	<Navbar />
 	<body>
 		<slot />
 	</body>
@@ -24,20 +28,54 @@ import Footer from "./Footer.astro"
 </html>
 
 <style is:global>
+	:root{
+		--main_bg_color: #27374D;
+		--secundary_color: #d0ff89;
+		--secundary_color_2: greenyellow;
+		--dark_color: #161c21;
+		--dark_color_2: #526D82;
+		--light_color:  #DDE6ED;
+		--light_color_2: #9DB2BF;
+		--border_r_1: 10px;
+	}	
+
 	html,
 	body {
-		color: white;
+		color: #DDE6ED;
 		font-size: 1.2rem;
 		background-color: #27374D;
 		margin: 0;
+		padding: 0;
 		width: 100%;
 		min-height: 100%;
-		overflow-x: hidden;
-		overflow-y: visible;
+		scroll-behavior: smooth;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	}
 	.title{
 		font-size: 5rem;
 		color: #DDE6ED;
         color: rgb(208, 255, 137);
+		font-weight: 800;
+		font-style: normal;
+		font-family: "Orbitron", serif;
+
 	}
+
+
+	.txt_title{
+		font-size: clamp( 1.7rem ,5vw , 3rem );
+	}
+
+	.txt_big{
+		font-size: clamp( 1.4rem , 4vw , 2rem );
+	}
+	.txt_normal{
+		font-size: clamp( 1.25rem , 3vw , 1.5rem );
+	}
+
+	@media screen and (max-width: 800px) {
+        .vertical{
+            font-size: 1.5rem;
+        }
+    }
 </style>

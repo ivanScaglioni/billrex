@@ -7,17 +7,19 @@ import banner from '../../assets/banner_mountain.png'
 
 <div class="game_card">
     
+    
+    <div>
+        <div class="game_title game_text">
+            Mountain
+        </div>
+    
+        <div class="game_description game_text">
+            Test your resilience by climbing this "impossible mountain(山)". A game inspired by "Golfing Goverit with Alva Majo" which in turn was inspired by the masterpiece "Getting Goverit with Bennett Fody"
+            
+        </div>
+    </div>
+    
     <img class="game_img" src={banner.src} alt="">
-
-
-    <div class="game_title game_text">
-        Mountain
-    </div>
-
-    <div class="game_description game_text">
-        Test your resilience by climbing this "impossible mountain(山)". A game inspired by "Golfing Goverit with Alva Majo" which in turn was inspired by the masterpiece "Getting Goverit with Bennett Fody"
-        
-    </div>
 </div>
 
 <style is:global>
@@ -25,31 +27,50 @@ import banner from '../../assets/banner_mountain.png'
 .game_title{
     text-align: center;
     font-size: 3rem;
+
 }
 
 
 
 .game_card{
     
-    min-width: 100%;
+    width: auto;
     z-index: 100;
     overflow: hidden;
-    background-color: #526d82b9;
-    backdrop-filter: blur(5px);
+    background-color: #161c21;
     border-radius: 10px;
+    display: flex;
+    height: 100%;
+    font-weight: bold;
+
     
 }
 
 .game_text{
     padding: 30px;
+
 }
 
 .game_img{
+
     object-fit: cover;
-    min-width: 100%;
-    height: 500px;
+    width: 40%;
+    height: 108%;
+
+
+
 }
 
-
+@media screen and (max-width: 800px) {
+    .game_card{
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    .game_img{
+        height: 30%;
+        width: 100%;
+    
+    }
+}
 
 </style>

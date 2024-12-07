@@ -38,9 +38,10 @@ import swampimg from '../assets/R.png'
 		height: 100vh;
 		background-position: center;
 		background-repeat: no-repeat;
-		font-size:  15rem;
+		user-select: none;
 		color: #b5ff78;
 		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		overflow: hidden;
 		
 	}
 	
@@ -48,7 +49,7 @@ import swampimg from '../assets/R.png'
 		z-index: 2;
 		position: fixed;
 		text-shadow: 0px 0px 15px #b5ff78;
-		
+		font-size:  15rem;
 		font-family: "Amarante", serif;
 		font-weight: 400;
 		font-style: normal;
@@ -59,6 +60,7 @@ import swampimg from '../assets/R.png'
 		margin-left: -40vh;
 		z-index: 1;
 		filter: brightness(0);
+		user-select: none;
 
 	}
 	.swamp_img{
@@ -66,6 +68,7 @@ import swampimg from '../assets/R.png'
 		
 		width: 800px;
 		margin-top: 50vh;
+		user-select: none;
 	
 
 		z-index: 3;
@@ -83,7 +86,7 @@ import swampimg from '../assets/R.png'
 		justify-self: flex-end;
 		margin-top: 100vh;
 		z-index: 30;
-		box-shadow: 0px 0px 100px 10px black;
+		box-shadow: 0px 0px 100px 10px rgb(0, 0, 0);
 	}
 	.bill{
 		position: relative;
@@ -94,5 +97,22 @@ import swampimg from '../assets/R.png'
 		position: relative;
 		top: -60px;
 		
+	}
+
+
+	@media screen and (max-width: 800px) {
+		.name {
+			font-size: 10rem;;
+		}
+		.bill{
+
+		top: 40px;
+
+		}
+		.rex{
+	
+			top: -40px;
+			
+		}
 	}
 </style>

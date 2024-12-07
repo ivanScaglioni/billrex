@@ -1,0 +1,256 @@
+<script>
+
+    
+    
+    function toggleNavbar(){
+        let navElement = document.querySelector('nav')
+        let btnElement = document.querySelector('#nav_btn')
+        console.log(navElement)
+        
+
+        if (navElement?.className.includes('close') || navElement?.className.includes('frist')){
+            
+            //open
+
+            navElement?.classList.remove('close')
+            navElement?.classList.add('open')
+            navElement?.classList.remove('frist')
+            btnElement?.classList.add('rota_left')
+            btnElement?.classList.remove('rota_rigth')
+
+        }else{
+
+            //close
+            
+            navElement?.classList.remove('open')
+            navElement?.classList.add('close')
+
+            btnElement?.classList.add('rota_rigth')
+            btnElement?.classList.remove('rota_left')
+
+        }
+    }
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.querySelector('nav');
+
+        btn?.addEventListener('click', toggleNavbar);
+    });
+
+
+</script>
+
+
+<nav  class="frist">
+    <div class="nav_container txt_big">
+        <div class="nav_link">
+            <a href="#games">
+
+                Games
+            </a>
+        </div>
+        <div class="nav_link">
+            <a href="#about">
+
+                About
+            </a>
+        </div>
+        <div class="nav_link">
+            <a href="#team">
+
+                Team
+            </a>
+        </div>
+    </div>
+    <div id="nav_btn" class=" ">
+        <div class="menu_btn">
+            <!--?xml version="1.0" encoding="utf-8"?-->
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg
+                width="50px"
+                height="50px"
+                viewBox="0 -0.5 17 17"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                class="si-glyph si-glyph-triangle-right"
+            >
+
+                <defs> </defs>
+                <g
+                    stroke="none"
+                    stroke-width="1"
+                    fill="none"
+                    fill-rule="evenodd"
+                >
+                    <path
+                        d="M6.113,15.495 C5.531,16.076 4.01,16.395 4.01,14.494 L4.01,1.506 C4.01,-0.333 5.531,-0.076 6.113,0.506 L12.557,6.948 C13.137,7.529 13.137,8.47 12.557,9.052 L6.113,15.495 L6.113,15.495 Z"
+                        fill="#1aff006d"
+                        class="si-glyph-fill"
+                    >
+                    </path>
+                </g>
+            </svg>
+        </div>
+    </div>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        height: 100vh;
+        width:  clamp( 200px, calc( -40vw + 50px), 400px );
+        z-index: 50;
+        
+        left: clamp( -150px, calc( -40vw + 50px), -350px ) ;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    #nav_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation-duration: 0.5s;
+        height: 100%;
+        border-left: solid #1aff006d;
+        border-left: solid rgb(26, 255, 0);
+        animation-fill-mode: forwards;
+    }
+    .nav_container{
+        width: 100%;
+        height: 100%;
+        display: flex; 
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        
+    }
+
+    .nav_link{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        padding-right: 0px;
+        margin-bottom: 20px;
+        transition-duration: .5s;
+    }
+
+    .nav_link:hover{
+
+        background-color: var(--dark_color_2);
+    }
+    a{
+        display:  flex;
+        width: 100%;
+        color:  var(--secundary_color);
+        text-decoration: none;
+        justify-content: center;
+
+    }
+
+
+    
+    a:visited{
+        width: 100%;
+        color:  var(--secundary_color);
+        text-align: center;
+        text-decoration: none;
+
+    }
+    .menu_btn{
+        position: relative;
+        animation-duration: 5s;
+
+        animation-iteration-count: infinite;
+        left: -10px;
+    
+    }
+
+    .rota_left{
+        animation-name: rotate_left;
+    }
+    .rota_rigth{
+        animation-name: rotate_rigth;
+    }
+
+
+    .open{
+        animation-name: open;
+        backdrop-filter: blur(10px);
+        background-color: #03131ee2;
+    }
+    .close{
+        animation-name: close;
+    }
+
+    @keyframes move_l_r {
+        0%{
+            left: 0px;
+
+        }
+
+
+        25%{
+            left:-10px;
+        }
+        50%{
+            left:0px;
+        }
+
+        75%{
+            left: -10px;
+        }
+        100%{
+            left: 0px;
+        }
+    }
+
+
+    @keyframes open {
+        0%{
+
+        }
+
+        100%{
+            left: 0px;
+        }
+        
+    }
+
+    @keyframes close {
+        0%{
+            left: 0px;
+        }
+
+        100%{
+            left:  clamp( -150px, calc( -40vw + 50px), -350px );
+
+        }
+        
+    }
+
+    @keyframes rotate_left {
+        0%{
+            rotate: 0deg;
+        }
+
+        100%{
+            rotate: 180deg;
+        }
+    }
+
+    @keyframes rotate_rigth {
+        0%{
+            rotate: 180deg;
+        }
+
+        100%{
+            rotate: 0deg;
+        }
+    }
+
+
+</style>
