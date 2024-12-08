@@ -86,7 +86,7 @@
                 >
                     <path
                         d="M6.113,15.495 C5.531,16.076 4.01,16.395 4.01,14.494 L4.01,1.506 C4.01,-0.333 5.531,-0.076 6.113,0.506 L12.557,6.948 C13.137,7.529 13.137,8.47 12.557,9.052 L6.113,15.495 L6.113,15.495 Z"
-                        fill="#1aff006d"
+                        fill="#2df4ffab"
                         class="si-glyph-fill"
                     >
                     </path>
@@ -108,6 +108,7 @@
         left: clamp( -150px, calc( -40vw + 50px), -350px ) ;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
+        transition-duration: 1s;
     }
     #nav_btn {
         display: flex;
@@ -115,8 +116,8 @@
         align-items: center;
         animation-duration: 0.5s;
         height: 100%;
-        border-left: solid #1aff006d;
-        border-left: solid rgb(26, 255, 0);
+
+        border-left: solid var(--secundary_color_2);
         animation-fill-mode: forwards;
     }
     .nav_container{

@@ -23,7 +23,7 @@
                         <div class=" about_title txt_title">
                             PROJECT
                         </div>
-                        <div class="about_text">
+                        <div class="about_text txt_normal">
                             The studio is already working on the launch of its first project, "Mountain", a simple game scheduled for release in 2025. This title is inspired by other games mainly "Golfing Over It with Alva Majo"
     
     
@@ -35,7 +35,7 @@
     
                         VISION
                         </div>
-                        <div class="about_text">
+                        <div class="about_text txt_normal">
                             At BILLREX we are aware of our limitations, but we are committed to continuous improvement. Our goal is to offer games with richer mechanics, more action and more fun, pushing the boundaries with each new project.
                         </div>
 
@@ -93,6 +93,7 @@
         border-bottom-left-radius: 10px;
     }
 
+
     .enter{
         background-color: var(--dark_color);
         border-top-right-radius: var(--border_r_1);
@@ -126,13 +127,21 @@
     }
     .about_title{
         text-align: center;
-        margin-left:10vw;
+        max-width: max-content;
         color: var(--secundary_color);
+        border-bottom: 5px solid var(--light_color_2);
+        border-left:  5px solid transparent;
+        border-right: 5px solid transparent;
+        padding-inline: 1vw;
+        
+
     }
 
     .about_text{
-        border-top: 10px solid var(--main_bg_color);
-        border-left:  10px solid transparent;
+        border-top: 10px solid var(--light_color_2);
+        border-left:  15px solid transparent;
+        border-right:  0px solid transparent;
+        border-top-right-radius: 10px;
         padding-block: 2vh;
         padding-left: 1vw;
     }

@@ -11,17 +11,19 @@
         <div class="enter">
             <div class="team_container">
                 <div class="team">
-                    <div class="team_photo"></div>
+
+                        <div class="team_photo"></div>
+                        
+
                     <div class="team_text txt_big">
-                        <div class="team_name txt_title">Iván Scaglioni</div>
+                        <div class="team_name txt_title">
+                            Iván Scaglioni
+                        </div>
                         <div class="team_career txt_normal">Programmer</div>
                         <div class="team_rango txt_normal">
                             Founder / Leader
                         </div>
                         <div class="team_role">
-                            <div class="title_role txt_normal">
-                                Role
-                            </div>
                             <div class="role">
                                 <span class="dot">-</span> Game Designer
                             </div>
@@ -35,18 +37,16 @@
                     </div>
                 </div>
                 <div class="team">
-                    <div class="team_photo"></div>
+                    <div>
+                        <div class="team_photo"></div>
+                    </div>
                     <div class="team_text txt_big">
-
                         <div class="team_name txt_title">Michael Fenandez</div>
                         <div class="team_career txt_normal">Graphic desing</div>
                         <div class="team_rango txt_normal">
-                            Colleague / Collaborator 
+                            Colleague / Collaborator
                         </div>
                         <div class="team_role">
-                            <div class="title_role txt_normal">
-                                Role
-                            </div>
                             <div class="role">
                                 <span class="dot">-</span> Art
                             </div>
@@ -57,7 +57,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -71,37 +70,41 @@
         text-align: center;
         gap: 50px;
         background-color: var(--dark_color);
-        padding: 30px;
+
         border-top-left-radius: var(--border_r_1);
         border-bottom-left-radius: var(--border_r_1);
+        height: 100%;
     }
 
     .team {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 100%;
+        max-width: 350px;
+        justify-content: center;
         align-items: center;
-
     }
     .team_photo {
         border-radius: 50%;
         border: solid greenyellow;
         height: 200px;
         width: 200px;
-        margin: 30px;
+
+
     }
-    .team_text{
+    .team_text {
         width: 100%;
     }
-    .team_name{
+    .team_name {
         color: var(--secundary_color);
     }
     .team_career,
-    .team_rango{
+    .team_rango {
         color: var(--light_color_2);
     }
 
-    .dot{
+    .dot {
         color: var(--secundary_color_2);
     }
     .title {
@@ -150,17 +153,38 @@
         animation-play-state: running;
     }
 
-    .team_role{
+    .team_role {
         text-align: start;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         align-self: flex-start;
-        margin-top: 20px;
+        justify-content: center;
+    
     }
-    .role{
-        margin-left: 20px;
+    .role {
+        justify-self: center;
+
+        font-weight: bold;
+        text-shadow: ;
+        color: var(--dark_color);
+        text-shadow: 
+
+        1px 0 0px var(--secundary_color), /* Derecha */
+        -1px 0 0px var(--secundary_color), /* Izquierda */
+        0 1px 0px var(--secundary_color), /* Abajo */
+        0 -1px 0px var(--secundary_color),
+        2px 0 0px var(--secundary_color), /* Derecha */
+        -2px 0 0px var(--secundary_color), /* Izquierda */
+        0 2px 0px var(--secundary_color), /* Abajo */
+        0 -2px 0px var(--secundary_color); /* Arriba */ /* Arriba */
+        
+        letter-spacing: 4px;
+
     }
 
     @media screen and (max-width: 800px) {
-        .game_container{
+        .game_container {
             grid-template-columns: 2rem auto;
             gap: 10px;
         }
