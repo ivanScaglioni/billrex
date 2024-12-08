@@ -1,156 +1,114 @@
-
-
 <div id="about" class="game_container">
-
-
-    
     <div class="content">
-
         <div class="enter">
             <div class="text_container">
                 <div class="text_center">
                     <div class="about_section">
-
-                        <div class="txt_title about_title">
-                            WHO WE ARE
-                        </div>
+                        <div class="txt_title about_title">WHO WE ARE</div>
                         <div class="txt_normal about_text">
-                            <span class="billrex">BILLREX</span>  is a small independent video game studio founded in 2024 by Ivan Scaglioni with the intention of exploring the world of video game development, its infinite possibilities and its challenges.
+                            <span class="billrex">BILLREX</span> is a small independent
+                            video game studio founded in 2024 by Ivan Scaglioni with
+                            the intention of exploring the world of video game development,
+                            its infinite possibilities and its challenges.
                         </div>
                     </div>
                     <div class="about_section">
-
-                        <div class=" about_title txt_title">
-                            PROJECT
-                        </div>
+                        <div class="about_title txt_title">PROJECT</div>
                         <div class="about_text txt_normal">
-                            The studio is already working on the launch of its first project, "Mountain", a simple game scheduled for release in 2025. This title is inspired by other games mainly "Golfing Over It with Alva Majo"
-    
-    
+                            The studio is already working on the launch of its
+                            first project, "Mountain", a simple game scheduled
+                            for release in 2025. This title is inspired by other
+                            games mainly "Golfing Over It with Alva Majo"
                         </div>
                     </div>
 
                     <div class="about_section">
-                        <div class="txt_title about_title">
-    
-                        VISION
-                        </div>
+                        <div class="txt_title about_title">VISION</div>
                         <div class="about_text txt_normal">
-                            At BILLREX we are aware of our limitations, but we are committed to continuous improvement. Our goal is to offer games with richer mechanics, more action and more fun, pushing the boundaries with each new project.
+                            At BILLREX we are aware of our limitations, but we
+                            are committed to continuous improvement. Our goal is
+                            to offer games with richer mechanics, more action
+                            and more fun, pushing the boundaries with each new
+                            project.
                         </div>
-
                     </div>
-
-
                 </div>
             </div>
         </div>
     </div>
     <div class="title">
-
         <div class="vertical">
-
-            <div class="cha">
-    
-                A
-            </div>
-            <div class="cha">
-    
-                B
-            </div>
-            <div class="cha">
-    
-                O
-            </div>
-            <div class="cha">
-    
-                U
-            </div>
-            <div class="cha">
-    
-                T
-            </div>
+            <div class="cha">A</div>
+            <div class="cha">B</div>
+            <div class="cha">O</div>
+            <div class="cha">U</div>
+            <div class="cha">T</div>
         </div>
-
-
     </div>
-
-    
 </div>
 
 <style>
-
-    
-    .title{
+    .title {
         text-align: end;
         position: relative;
 
         min-width: 30%;
-        color: #27374D;
+        color: #27374d;
 
         background-color: #cff694;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
     }
 
-
-    .enter{
+    .enter {
         background-color: var(--dark_color);
         border-top-right-radius: var(--border_r_1);
         border-bottom-right-radius: var(--border_r_1);
     }
-    
-    .game_container{
-        display:  grid;
+
+    .game_container {
+        display: grid;
         grid-template-columns: 70% auto;
         min-width: 100%;
         gap: 30px;
-        min-height:100vh;
+        min-height: 100vh;
     }
-    .cha{
-        
+    .cha {
     }
-    
-    .vertical{
+
+    .vertical {
         text-align: center;
-        position: sticky ;
+        position: sticky;
         top: 100px;
-        
-        
     }
-    
-    
-    
-    .about_section{
+
+    .about_section {
         padding: 20px;
-    
     }
-    .about_title{
+    .about_title {
         text-align: center;
         max-width: max-content;
         color: var(--secundary_color);
         border-bottom: 5px solid var(--light_color_2);
-        border-left:  5px solid transparent;
+        border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         padding-inline: 1vw;
-        
-
     }
 
-    .about_text{
+    .about_text {
         border-top: 10px solid var(--light_color_2);
-        border-left:  15px solid transparent;
-        border-right:  0px solid transparent;
+        border-left: 15px solid transparent;
+        border-right: 0px solid transparent;
         border-top-right-radius: 10px;
         padding-block: 2vh;
         padding-left: 1vw;
     }
-    .content{
+    .content {
         position: relative;
         overflow: hidden;
     }
 
-    .enter{
+    .enter {
         width: 100%;
         height: 100%;
         position: relative;
@@ -159,44 +117,39 @@
         animation-duration: 2s;
         animation-fill-mode: forwards;
         animation-play-state: paused;
-
     }
 
-    .text_container{
+    .text_container {
         height: 100%;
-        display:  flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding-inline: 2vw;
         text-align: justify;
-        
     }
 
-    .text_center{
+    .text_center {
         max-width: 800px;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         gap: 50px;
-        
-
     }
-    
-    .start{
+
+    .start {
         animation-play-state: running;
     }
-    
-    @keyframes zero_right {
-        100%{
-            right: 0px;
 
+    @keyframes zero_right {
+        100% {
+            right: 0px;
         }
     }
 
     @media screen and (max-width: 800px) {
-        .game_container{
+        .game_container {
             grid-template-columns: auto 2rem;
             gap: 10px;
         }

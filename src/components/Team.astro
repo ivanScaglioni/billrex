@@ -11,14 +11,9 @@
         <div class="enter">
             <div class="team_container">
                 <div class="team">
-
-                        <div class="team_photo"></div>
-                        
-
+                    <div class="team_photo"></div>
                     <div class="team_text txt_big">
-                        <div class="team_name txt_title">
-                            Iván Scaglioni
-                        </div>
+                        <div class="team_name txt_title">Iván Scaglioni</div>
                         <div class="team_career txt_normal">Programmer</div>
                         <div class="team_rango txt_normal">
                             Founder / Leader
@@ -37,9 +32,7 @@
                     </div>
                 </div>
                 <div class="team">
-                    <div>
-                        <div class="team_photo"></div>
-                    </div>
+                    <div class="team_photo"></div>
                     <div class="team_text txt_big">
                         <div class="team_name txt_title">Michael Fenandez</div>
                         <div class="team_career txt_normal">Graphic desing</div>
@@ -68,30 +61,28 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 50px;
+        gap: 20px;
         background-color: var(--dark_color);
-
+        height: 100%;
         border-top-left-radius: var(--border_r_1);
         border-bottom-left-radius: var(--border_r_1);
-        height: 100%;
+
     }
 
     .team {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         width: 100%;
-        max-width: 350px;
+        max-width: 300px;
         justify-content: center;
         align-items: center;
+        margin-block: 30px;
     }
     .team_photo {
         border-radius: 50%;
-        border: solid greenyellow;
+        border: solid var(--secundary_color_2);
         height: 200px;
         width: 200px;
-
-
     }
     .team_text {
         width: 100%;
@@ -110,7 +101,6 @@
     .title {
         text-align: end;
         position: relative;
-
         min-width: 30%;
         background-color: var(--secundary_color);
         color: var(--main_bg_color);
@@ -124,8 +114,6 @@
         min-width: 100%;
         gap: 30px;
         min-height: 100vh;
-    }
-    .cha {
     }
     .vertical {
         text-align: center;
@@ -157,30 +145,24 @@
         text-align: start;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         align-self: flex-start;
-        justify-content: center;
-    
     }
     .role {
         justify-self: center;
-
         font-weight: bold;
-        text-shadow: ;
+        text-shadow:;
         color: var(--dark_color);
-        text-shadow: 
+        text-shadow:
+            1px 0 0px var(--secundary_color),
+            /* Derecha */ -1px 0 0px var(--secundary_color),
+            /* Izquierda */ 0 1px 0px var(--secundary_color),
+            /* Abajo */ 0 -1px 0px var(--secundary_color),
+            2px 0 0px var(--secundary_color),
+            /* Derecha */ -2px 0 0px var(--secundary_color),
+            /* Izquierda */ 0 2px 0px var(--secundary_color),
+            /* Abajo */ 0 -2px 0px var(--secundary_color); /* Arriba */ /* Arriba */
 
-        1px 0 0px var(--secundary_color), /* Derecha */
-        -1px 0 0px var(--secundary_color), /* Izquierda */
-        0 1px 0px var(--secundary_color), /* Abajo */
-        0 -1px 0px var(--secundary_color),
-        2px 0 0px var(--secundary_color), /* Derecha */
-        -2px 0 0px var(--secundary_color), /* Izquierda */
-        0 2px 0px var(--secundary_color), /* Abajo */
-        0 -2px 0px var(--secundary_color); /* Arriba */ /* Arriba */
-        
         letter-spacing: 4px;
-
     }
 
     @media screen and (max-width: 800px) {
